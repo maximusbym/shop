@@ -7,10 +7,12 @@ $routs = [
     'registration',
     'logout',
     'basket',
-    //'account',
+    'order',
 
     'catalog',
-    'product'
+    'product',
+
+    'admin'
 ];
 
 $_action = $_subAction = $_id = null;
@@ -58,10 +60,12 @@ if( $_SERVER['REQUEST_URI'] != '/' ) {
 //    echo '$_action= '.$_action.'<br/>';
 //    echo '$_subAction= '.$_subAction.'<br/>';
 //    echo '$_id= '.$_id.'<br/>';
-    
-    //echo '<hr>';
-    //exit();
-    include_once "controller.php";
+//
+//    var_dump( $_GET );
+//
+//    echo '<hr>';
+//    exit();
+
 }
 else{
     //include_once 'controllers/mainController.php';

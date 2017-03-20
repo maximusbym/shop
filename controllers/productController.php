@@ -13,6 +13,5 @@ if( $_action == 'product' && $_id ) {
     }
 
     view('product', $product);
-    //include_once 'templates/productView.php';
 }
 

@@ -7,6 +7,7 @@ define("PASS", "secret_pass");
 define("DBNAME", "lesson9");
 
 
-$config = [
-    'admin_email' => 'admin@email.com'
+$_config = [
+    'admin_email' => 'admin@email.com',
+    'items_on_page' => 20
 ];

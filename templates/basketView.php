@@ -7,7 +7,7 @@ echo '<hr/>';
 
 ?>
 
-<form action="/order">
+<form action="/order" method="POST">
 
     <textarea name="comment" id="" cols="30" rows="10"></textarea>
 

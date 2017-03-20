@@ -13,6 +13,7 @@ if($_action=='login') {
 
             $_SESSION['user_id'] = $uniqueUser[0]['id'];
             $_SESSION['user_name'] = $uniqueUser[0]['name'];
+            $_SESSION['role'] = $uniqueUser[0]['role'];
             $_SESSION['flash_msg'] = "User <b>" . $uniqueUser[0]['name'] . "</b> logged in";
             header('location: /');
             exit();

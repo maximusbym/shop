@@ -33,6 +33,8 @@ function email_check($email){
 //view redirection
 function view($_View, $data = []){
 
+    global $_config, $_page;
+
     include "templates/header.php";
 
     if (file_exists('templates/'.$_View.'View.php')){

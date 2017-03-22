@@ -55,6 +55,11 @@ if( $_SERVER['REQUEST_URI'] != '/' ) {
         exit();
     }
 
+    if( $_action == 'admin' ) {
+        $_method = $_GET['method'] ?? null;
+        $_page = $_GET['page'] ?? 0;
+    }
+
 //    var_dump($urlArray);
 //    echo '<hr>';
 //    echo '$_action= '.$_action.'<br/>';

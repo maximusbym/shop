@@ -37,6 +37,7 @@ if(isset($_SESSION['flash_msg'])){
 ?>
 
 <?php if( isset( $_SESSION['user_id'] ) ) { ?>
+    <img src="/files/avatars/avatar_<?=$_SESSION['user_id']?>.jpg" style="max-width:100px;" alt="">
     <?=$_SESSION['user_name']?>  <a href="/logout">Logout</a>
 <?php } else  { ?>
     <a href="/login">Login</a> | <a href="/registration">Registration</a>

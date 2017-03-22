@@ -9,7 +9,14 @@ if( $_subAction == 'user' && $_method == 'edit' ) {
 }
 else if( $_subAction == 'user' && $_method == 'update' ) {
 
-    $user = saveUser( $pdo, $_POST['form'] );
+    $id = $_POST['form']['id'];
+    $res = saveUser( $pdo, $_POST['form'] );
+
+    if( $res && $_FILES['avatar'] ) {
+        $fileName = 'avatar_'.$id.'.jpg';
+        move_uploaded_file($_FILES['avatar']['tmp_name'], 'files/avatars/'.$fileName);
+    }
+
     header('location: /admin/user/?method=edit&id='.$_POST['form']['id']);
     exit();
 }

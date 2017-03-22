@@ -1,3 +1,6 @@
+<a href="/admin/user/?method=create">Create user</a>
+<br>
+<br>
 
 <table style="border-collapse: collapse;">
 
@@ -28,23 +31,9 @@
 
 <div class="pagination">
 
-    <?php for( $page=0; $page < $data['pagination']['pages_count']; $page++ ) { ?>
-
-        <?php $curPage = $_page; ?>
-
-        <?php if( ($page < $curPage+3 && $page > $curPage-3)
-            || ( $page == 0 )
-            || ( $page == $data['pagination']['pages_count']-1 )) { ?>
-
-            <a href="/admin/user?page=<?=$page ?>">
-                <?= ( $curPage == $page ) ? '<strong>' : '' ?>
-                    <?=$page + 1 ?>
-                <?= ( $curPage == $page ) ? '</strong>' : '' ?>
-            </a> |
-
-
-        <?php } ?>
-
-    <?php } ?>
+    <?php pagination(
+        $data['pagination']['pages_count'],
+        '/admin/user'
+    ); ?>
 
 </div>

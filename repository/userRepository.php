@@ -39,7 +39,7 @@ function getUser( $pdo, $id ) {
 
 function saveUser( $pdo, $userData ) {
 
-    $user = sql($pdo,
+    $res = sql($pdo,
         'UPDATE `users` set 
           `name` = "'. $userData['name'] .'",  
           `email` = "'. $userData['email'] .'",  
@@ -48,5 +48,5 @@ function saveUser( $pdo, $userData ) {
           WHERE `id` = '.$userData['id']
     );
 
-    return $user;
+    return $res;
 }
